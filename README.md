@@ -1,25 +1,83 @@
-The dataset is available at [Kaggle](https://www.kaggle.com/datasets/arnabbiswas1/microsoft-azure-predictive-maintenance) .This dataset was available as a part of Azure AI Notebooks for Microsoft Predictive Maintenance.
+# Predictive Maintenance - Microsoft Azure Dataset
 
-**There are 5 nos. of following CSV files downloaded from Kaggle:**
+A comprehensive dataset for predictive maintenance modeling, featuring time-series telemetry data, error logs, maintenance records, and failure data from 100 machines collected throughout 2015.
 
-Telemetry Time Series Data (PdM_telemetry.csv).
-Error (PdM_errors.csv).
-Maintenance (PdM_maint.csv).
-Failures (PdM_failures.csv).
-Metadata of Machines (PdM_Machines.csv).
+**Dataset Source:** [Kaggle - Microsoft Azure Predictive Maintenance](https://www.kaggle.com/datasets/arnabbiswas1/microsoft-azure-predictive-maintenance)
 
-**Machine conditions and usage:** The operating conditions of a machine e.g. data collected from sensors.
-Failure history: The failure history of a machine or component within the machine.
-Maintenance history: The repair history of a machine, e.g. error codes, previous maintenance activities or component replacements.
-Machine features: The features of a machine, e.g. engine size, make and model, location.
+---
 
-**Details:**
-Telemetry Time Series Data (PdM_telemetry.csv): It consists of hourly average of voltage, rotation, pressure, vibration collected from 100 machines for the year 2015.
+## 📋 Table of Contents
 
-**Error (PdM_errors.csv):** These are errors encountered by the machines while in operating condition. Since, these errors don't shut down the machines, these are not considered as failures. The error date and times are rounded to the closest hour since the telemetry data is collected at an hourly rate.
+- [Dataset Overview](#dataset-overview)
+- [Files Included](#files-included)
+- [Data Categories](#data-categories)
+- [File Details](#file-details)
 
-**Maintenance (PdM_maint.csv):** If a component of a machine is replaced, that is captured as a record in this table. Components are replaced under two situations: 1. During the regular scheduled visit, the technician replaced it (Proactive Maintenance) 2. A component breaks down and then the technician does an unscheduled maintenance to replace the component (Reactive Maintenance). This is considered as a failure and corresponding data is captured under Failures. Maintenance data has both 2014 and 2015 records. This data is rounded to the closest hour since the telemetry data is collected at an hourly rate.
+---
 
-**Failures (PdM_failures.csv):** Each record represents replacement of a component due to failure. This data is a subset of Maintenance data. This data is rounded to the closest hour since the telemetry data is collected at an hourly rate.
+## Dataset Overview
 
-**Metadata of Machines (PdM_Machines.csv):** Model type & age of the Machines.
+This dataset was originally part of the Azure AI Notebooks for Microsoft Predictive Maintenance. It contains 5 CSV files with different aspects of machine operating data, making it ideal for:
+- Building predictive maintenance models
+- Time-series analysis
+- Component failure prediction
+- Maintenance optimization
+
+---
+
+## 📁 Files Included
+
+| File Name | Description |
+|-----------|-------------|
+| `PdM_telemetry.csv` | Hourly sensor readings (voltage, rotation, pressure, vibration) |
+| `PdM_errors.csv` | Non-critical errors encountered during operation |
+| `PdM_maint.csv` | Maintenance and component replacement records |
+| `PdM_failures.csv` | Component failures and replacements |
+| `PdM_Machines.csv` | Machine metadata (model type, age) |
+
+---
+
+## 📊 Data Categories
+
+### Machine Conditions and Usage
+Operating conditions of machines with data collected from sensors (e.g., voltage, vibration, pressure).
+
+### Failure History
+Historical record of machine and component failures within machines.
+
+### Maintenance History
+Repair history including error codes, previous maintenance activities, and component replacements.
+
+### Machine Features
+Metadata about machines including engine size, make, model, and location.
+
+---
+
+## 🔍 File Details
+
+### Telemetry Time Series Data (`PdM_telemetry.csv`)
+Contains hourly averages of:
+- Voltage
+- Rotation
+- Pressure
+- Vibration
+
+**Coverage:** 100 machines throughout 2015
+
+### Error Data (`PdM_errors.csv`)
+Records non-critical errors encountered during machine operation. These errors do not shut down the machines and are therefore not classified as failures. Timestamps are rounded to the nearest hour to align with telemetry data collection frequency.
+
+### Maintenance Records (`PdM_maint.csv`)
+Captures component replacements under two scenarios:
+1. **Proactive Maintenance:** Regular scheduled replacements by technicians
+2. **Reactive Maintenance:** Unscheduled replacements due to component failure
+
+**Coverage:** Records from 2014 and 2015 with hourly-rounded timestamps.
+
+### Failure Data (`PdM_failures.csv`)
+Represents component replacements due to failure. This is a subset of the maintenance data with hourly-rounded timestamps aligned to telemetry collection frequency.
+
+### Machine Metadata (`PdM_Machines.csv`)
+Contains machine characteristics including:
+- Model type
+- Age/manufacture year
